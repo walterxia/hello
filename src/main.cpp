@@ -3,12 +3,16 @@ using namespace std;
 
 //#define DP_TEST
 //#define EXAM_TEST
+#define MODERN_TEST
 
 #ifdef DP_TEST
     #include "dp.h"
 #endif
 #ifdef EXAM_TEST
     #include "exam.h"
+#endif
+#ifdef MODERN_TEST
+    #include "modern.h"
 #endif
 
 int main()
@@ -18,6 +22,9 @@ int main()
     #endif
     #ifdef EXAM_TEST
         EXAM::testrun();
+    #endif
+    #ifdef MODERN_TEST
+        MODERN::testrun();
     #endif
 
     return 0;
