@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1608216089 source:c:\src\hello\src\dp.cpp
+	"dp.h"
+
+1608216089 c:\src\hello\src\dp.h
+	<string>
+	<iostream>
+	<ctime>
+	<ratio>
+	<chrono>
+	<vector>
+	<limits>
+
+1608216089 source:c:\src\hello\src\exam.cpp
+	<iostream>
+	<vector>
+	<set>
+
+1608216089 source:c:\src\hello\src\main.cpp
+	<iostream>
+	"dp.h"
+	"exam.h"
+	"modern.h"
+
+1608216089 c:\src\hello\src\exam.h
+
+1608218615 c:\src\hello\src\modern.h
+	"common.h"
+
+1608216891 c:\src\hello\src\common.h
+	<iostream>
+	<vector>
+
+1608218683 source:c:\src\hello\src\modern.cpp
+	"modern.h"
+

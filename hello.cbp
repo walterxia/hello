@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="src/common.h" />
+		<Unit filename="src/modern.h" />
+		<Unit filename="src/modern.cpp" />
 		<Unit filename="src/dp.cpp" />
 		<Unit filename="src/dp.h" />
 		<Unit filename="src/exam.cpp" />
