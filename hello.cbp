@@ -32,11 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="dp.cpp" />
-		<Unit filename="dp.h" />
-		<Unit filename="exam.cpp" />
-		<Unit filename="exam.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="src/dp.cpp" />
+		<Unit filename="src/dp.h" />
+		<Unit filename="src/exam.cpp" />
+		<Unit filename="src/exam.h" />
+		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

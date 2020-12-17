@@ -1,0 +1,3 @@
+namespace EXAM{
+    void testrun();
+}
