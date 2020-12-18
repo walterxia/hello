@@ -3,7 +3,8 @@ using namespace std;
 
 //#define DP_TEST
 //#define EXAM_TEST
-#define MODERN_TEST
+//#define MODERN_TEST
+#define SORT_TEST
 
 #ifdef DP_TEST
     #include "dp.h"
@@ -13,6 +14,9 @@ using namespace std;
 #endif
 #ifdef MODERN_TEST
     #include "modern.h"
+#endif
+#ifdef SORT_TEST
+    #include "sort.h"
 #endif
 
 int main()
@@ -25,6 +29,9 @@ int main()
     #endif
     #ifdef MODERN_TEST
         MODERN::testrun();
+    #endif
+    #ifdef SORT_TEST
+        SORT::testrun();
     #endif
 
     return 0;

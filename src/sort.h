@@ -1,5 +1,4 @@
 #include "common.h"
-
-namespace DP{
+namespace SORT{
     void testrun();
 }

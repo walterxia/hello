@@ -32,14 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="sort.cpp" />
+		<Unit filename="sort.h" />
 		<Unit filename="src/common.h" />
-		<Unit filename="src/modern.h" />
-		<Unit filename="src/modern.cpp" />
 		<Unit filename="src/dp.cpp" />
 		<Unit filename="src/dp.h" />
 		<Unit filename="src/exam.cpp" />
 		<Unit filename="src/exam.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/modern.cpp" />
+		<Unit filename="src/modern.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
