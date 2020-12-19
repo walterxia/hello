@@ -32,8 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="sort.cpp" />
-		<Unit filename="sort.h" />
+		<Unit filename="src/sort.cpp" />
+		<Unit filename="src/sort.h" />
 		<Unit filename="src/common.h" />
 		<Unit filename="src/dp.cpp" />
 		<Unit filename="src/dp.h" />
