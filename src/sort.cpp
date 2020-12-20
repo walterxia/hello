@@ -19,6 +19,7 @@ namespace SORT{ // From small to big (default)
     */
     void simpleInsertionSort(vector<int>& v) // Compare. In-place. O(n*n)
     {
+        ENTER();
         int vSize = static_cast<int>(v.size());
         if(vSize >= 2)
         {
@@ -42,6 +43,7 @@ namespace SORT{ // From small to big (default)
     */
     void bubbleSort(vector<int>& v)
     {
+        ENTER();
         int vSize = static_cast<int>(v.size());
         for(int i = 0; i < vSize-1; ++i)
         {
@@ -60,11 +62,94 @@ namespace SORT{ // From small to big (default)
         }
     }
 
+    /* n iterate, select min/max in unsorted list and swap it with first one in unsorted list
+       range shorten*/
     void selectionSort(vector<int>& v)
     {
-
+        ENTER();
+        int vSize = static_cast<int>(v.size());
+        for(int i = 0; i < vSize; ++i)
+        {
+            int minIdx = i;
+            for(int j = i+1; j < vSize; ++j)
+            {
+                if(v[j] < v[minIdx])
+                    minIdx = j;
+            }
+            if(minIdx != i)
+                swap(v[minIdx], v[i]);
+        }
     }
 
+    void shellSort(vector<int>& v) // gap, subsequence (can use different sort, such as bubble)
+    {
+        ENTER();
+        int vSize = static_cast<int>(v.size());
+        int gap = vSize;
+        while(gap > 1)
+        {
+            gap = gap/2; // based on experience
+            bool swapflag = false;
+            for(int i = 0; i < vSize-1; ++i)
+            {
+                for(int j=0; j < vSize-i-gap; ++j)
+                {
+                    if(v[j]>v[j+gap])
+                    {
+                        swap(v[j], v[j+gap]);
+                        swapflag = true;
+                    }
+
+                }
+                if(!swapflag)
+                    break;
+            }
+        }
+    }
+
+    void _quickSort(vector<int>& v, int s, int t, bool pivotByMiddle=false)
+    {
+        int low, high;
+        if(s < t)
+        {
+            int pivot = s;
+            if(pivotByMiddle)//head,tail,middle
+            {
+                int mid = (s+t)/2;
+                int pivot = middle(v, s, mid, t);
+                if(pivot != s)
+                    swap(v[s], v[pivot]);
+            }
+            low = s;
+            high = t+1;
+            while(1)
+            {
+                do low++; //skip the pivot
+                while(v[low]<=v[pivot] && low!= t);  // v[s] is the pivot. Also middle as pivot
+
+                do high--;//skip invalid end
+                while(v[high]>=v[pivot] && high!=s);
+
+                if(low < high)
+                    swap(v[low], v[high]);
+                else
+                    break;
+            }
+            swap(v[pivot], v[high]); //low==high
+            _quickSort(v, s, high-1, pivotByMiddle); // skip v[high]
+            _quickSort(v, high+1, t, pivotByMiddle);
+        }
+    }
+    void quickSort(vector<int>& v) // partition, improved bubble. Swap. NOT Stable
+    {
+        ENTER();
+        _quickSort(v, 0, v.size()-1);
+    }
+    void quickSort_pivot(vector<int>& v) // partition, improved bubble. Swap. NOT Stable
+    {
+        ENTER();
+        _quickSort(v, 0, v.size()-1, true);
+    }
 
     void testrun()
     {
@@ -80,5 +165,24 @@ namespace SORT{ // From small to big (default)
         bubbleSort(bb);
         dump(bb);
 
+        vector<int> cc(unsortedData);
+        selectionSort(cc);
+        dump(cc);
+
+        vector<int> dd(unsortedData);
+        shellSort(dd);
+        dump(dd);
+
+        vector<int> ee(unsortedData);
+        quickSort(ee);
+        dump(ee);
+
+        cout <<"*********************************************" <<endl;
+        vector<int> tt = genRandomArray(20000000);
+
+        auto x1 = tt;
+        quickSort(x1);
+        auto x2 = tt;
+        quickSort_pivot(x2);
     }
 }

@@ -22,7 +22,7 @@
 1608218615 c:\src\hello\src\modern.h
 	"common.h"
 
-1608332326 c:\src\hello\src\common.h
+1608477486 c:\src\hello\src\common.h
 	<string>
 	<iostream>
 	<ctime>
@@ -30,13 +30,14 @@
 	<chrono>
 	<vector>
 	<limits>
+	<random>
 
-1608218683 source:c:\src\hello\src\modern.cpp
+1608473999 source:c:\src\hello\src\modern.cpp
 	"modern.h"
 
 1608332326 c:\src\hello\src\sort.h
 	"common.h"
 
-1608338330 source:c:\src\hello\src\sort.cpp
+1608476077 source:c:\src\hello\src\sort.cpp
 	"sort.h"
 

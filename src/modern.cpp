@@ -59,7 +59,7 @@ namespace MODERN{
 
     void return_vector_test2()
     {
-        std::vector<int> &&rval_ref = return_vector2();
+     //   std::vector<int> &&rval_ref = return_vector2();
         //const std::vector<int>& rval_ref = return_vector(); // 等价于上表达式子
     }
 
