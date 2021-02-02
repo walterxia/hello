@@ -1,3 +1,4 @@
-namespace EXAM{
-    void testrun();
+namespace EXAM
+{
+void testrun();
 }

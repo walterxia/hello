@@ -41,3 +41,42 @@
 1608476077 source:c:\src\hello\src\sort.cpp
 	"sort.h"
 
+1612278089 source:c:\newsrc\hello\src\exam.cpp
+	<iostream>
+	<vector>
+	<set>
+
+1612278188 source:c:\newsrc\hello\src\main.cpp
+	<iostream>
+	"dp.h"
+	"exam.h"
+	"modern.h"
+	"sort.h"
+
+1612278089 c:\newsrc\hello\src\dp.h
+	"common.h"
+
+1612278263 c:\newsrc\hello\src\common.h
+	<string>
+	<iostream>
+	<ctime>
+	<ratio>
+	<chrono>
+	<vector>
+	<limits>
+	<random>
+
+1612278089 c:\newsrc\hello\src\exam.h
+
+1612278089 c:\newsrc\hello\src\modern.h
+	"common.h"
+
+1612278089 c:\newsrc\hello\src\sort.h
+	"common.h"
+
+1612278089 source:c:\newsrc\hello\src\modern.cpp
+	"modern.h"
+
+1612278089 source:c:\newsrc\hello\src\sort.cpp
+	"sort.h"
+

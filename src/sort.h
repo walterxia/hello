@@ -1,4 +1,5 @@
 #include "common.h"
-namespace SORT{
-    void testrun();
+namespace SORT
+{
+void testrun();
 }

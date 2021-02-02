@@ -2,9 +2,18 @@
 
 struct RValue
 {
-    RValue():_name("default"){cout << "default ctor" << endl;}
-    RValue(string name):_name(name){cout << name << " ctor" << endl;}
-    ~RValue(){cout << "~dctor" << endl;}
+    RValue():_name("default")
+    {
+        cout << "default ctor" << endl;
+    }
+    RValue(string name):_name(name)
+    {
+        cout << name << " ctor" << endl;
+    }
+    ~RValue()
+    {
+        cout << "~dctor" << endl;
+    }
     RValue(const RValue& other)
     {
         cout << "const RValue& ctor" << endl;
@@ -19,6 +28,7 @@ struct RValue
 };
 
 
-namespace MODERN{
-    void testrun();
+namespace MODERN
+{
+void testrun();
 }

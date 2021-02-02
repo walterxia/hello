@@ -11,19 +11,28 @@ using namespace std::chrono;
 using std::default_random_engine;
 using std::uniform_real_distribution;
 
-class EnterExit{
-    public:
-        EnterExit(string functionName):_functionName(functionName){cout << "Enter " << _functionName << endl;  t1 = high_resolution_clock::now();}
-        ~EnterExit(){
-            high_resolution_clock::time_point t2 = high_resolution_clock::now();
-            duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
-            cout << "Exit " << _functionName << " time consume:" << time_span.count() << " seconds" << endl << endl;}
-    private:
-        string _functionName;
-        high_resolution_clock::time_point t1;
+class EnterExit
+{
+public:
+    EnterExit(string functionName, string extra=""):_functionName(functionName), _extra(extra)
+    {
+        cout << "Enter " << _functionName << "  " << _extra << endl;
+        t1 = high_resolution_clock::now();
+    }
+    ~EnterExit()
+    {
+        high_resolution_clock::time_point t2 = high_resolution_clock::now();
+        duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
+        cout << "Exit " << _functionName << "  " << _extra << " time consume:" << time_span.count() << " seconds" << endl << endl;
+    }
+private:
+    string _functionName;
+    string _extra;
+    high_resolution_clock::time_point t1;
 };
 
 #define ENTER() EnterExit _enter(__FUNCTION__);
+#define ENTER1(extra) EnterExit _enter(__FUNCTION__, extra);
 
 inline vector<int> genRandomArray(int number)
 {

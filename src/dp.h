@@ -1,5 +1,6 @@
 #include "common.h"
 
-namespace DP{
-    void testrun();
+namespace DP
+{
+void testrun();
 }
